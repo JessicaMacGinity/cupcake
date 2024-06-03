@@ -1,0 +1,407 @@
+/* Reset de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; /* Prevenir rolagem horizontal */
+    background: linear-gradient(to right, #000000, #444444); /* Fundo gradiente futurista */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+    perspective: 1000px; /* Adiciona uma perspectiva 3D */
+    transform-style: preserve-3d; /* Mantém os elementos filhos em 3D */
+}
+
+/* Efeito de rotação 3D para o body */
+body:hover {
+    transform: rotateY(10deg); /* Rotaciona o body no eixo Y */
+    transition: transform 1s ease; /* Adiciona uma transição suave */
+}
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #006494; /* Cor azul similar ao login e registro */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Adiciona um pouco de arredondamento nas bordas */
+    background-image: linear-gradient(to right, #006494, #2980b9); /* Gradiente azul */
+    transition: background-image 0.3s ease, transform 0.3s ease; /* Efeito de transição suave */
+}
+
+/* Adiciona um efeito de transição suave quando o mouse passa sobre o header */
+.header:hover {
+    background-image: linear-gradient(to right, #2980b9, #006494); /* Inverte o gradiente ao passar o mouse */
+    transform: translateY(-3px); /* Move ligeiramente para cima ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estiliza o texto dentro do header */
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; /* Centraliza o texto */
+    transition: color 0.3s ease; /* Efeito de transição suave na cor do texto */
+}
+
+/* Estiliza os ícones no header */
+.header i {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Efeito de transição suave nos ícones */
+}
+
+/* Adiciona um efeito de transição suave nos ícones quando o mouse passa sobre eles */
+.header i:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho do ícone */
+}
+
+
+
+.welcome-message {
+    margin: 0;
+    font-size: 32px; /* Aumenta o tamanho da fonte para um visual mais impactante */
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Roboto', sans-serif; /* Uma fonte moderna e futurista */
+    text-transform: uppercase; /* Transforma o texto em maiúsculo */
+    letter-spacing: 2px; /* Adiciona um espaçamento entre as letras */
+    color: #fff; /* Cor branca para melhor contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar o texto */
+}
+
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.header-icons a:hover {
+    color: #f39c12; /* Cor laranja ao passar o mouse, combinando com a cor do login/registro */
+}
+
+.header-icons i {
+    margin-right: 8px;
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+}
+
+/* Efeito de hover para tornar mais interativo */
+.content:hover {
+    background-color: #f2f2f2; /* Mudança de cor de fundo ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de levantamento sutil */
+}
+
+
+.flash-messages {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffa000; /* Cor de fundo laranja vibrante */
+    color: #fff; /* Texto branco para contraste */
+    border-radius: 5px;
+    border: 2px solid #ffa000; /* Borda combinando com o fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-20px); /* Inicialmente deslocado para cima */
+}
+
+/* Efeito de entrada ao mostrar a mensagem */
+.flash-messages.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adicione ícones ou emojis conforme necessário */
+.flash-messages::before {
+    content: '\1F389'; /* Unicode para um emoji festivo, ajuste conforme desejado */
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Efeito de hover para destacar a mensagem */
+.flash-messages:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+
+.cupcake-list h1 {
+    margin-bottom: 20px;
+    font-size: 36px; /* Tamanho maior para um aspecto mais impactante */
+    color: #ff4081; /* Cor rosa vibrante */
+    text-align: center;
+    position: relative; /* Para aplicar animações */
+}
+
+/* Efeito de brilho pulsante */
+.cupcake-list h1::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 64, 129, 0.8) 0%, transparent 70%);
+    animation: pulse 2s ease-in-out infinite;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+.cupcake-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cupcake-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    text-align: center;
+}
+
+.cupcake-item:hover {
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+
+.cupcake-item {
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradiente suave para o fundo */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Transições suaves */
+    width: 280px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cupcake-item:hover {
+    transform: translateY(-5px); /* Movimento para cima ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+.cupcake-item:hover .cupcake-image img {
+    filter: grayscale(100%); /* Transforma a imagem em escala de cinza ao passar o mouse */
+}
+
+.cupcake-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: filter 0.3s; /* Transição suave para a transformação de escala de cinza */
+    cursor: pointer;
+}
+
+.cupcake-info {
+    padding: 20px;
+}
+
+.cupcake-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cupcake-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.cupcake-price {
+    font-size: 18px;
+    color: #006494;
+    margin-bottom: 20px;
+}
+
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.quantity-selector button {
+    background-color: #006494; /* Cor azul similar ao login e registro */
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quantity-selector button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.quantity-selector input {
+    width: 50px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: border-color 0.3s;
+}
+
+.quantity-selector input:focus {
+    border-color: #663399; /* Cor original */
+    box-shadow: 0 0 8px rgba(102, 51, 153, 0.5);
+    outline: none;
+}
+
+
+.buy-button {
+    background-color: #006494; /* Cor azul similar ao login e registro */
+    color: white;
+    border: 2px solid transparent; /* Adicionando borda transparente */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+    position: relative; /* Posição relativa para o pseudo-elemento */
+    overflow: hidden; /* Esconder o conteúdo excedente */
+}
+
+.buy-button::before {
+    content: ''; /* Criar um pseudo-elemento */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1); /* Cor do efeito de clique */
+    transition: transform 0.3s ease-out;
+    border-radius: 50%; /* Transformar em um círculo */
+    z-index: -1; /* Colocar atrás do botão */
+    transform: translate(-50%, -50%) scale(0); /* Iniciar escondido */
+}
+
+.buy-button:hover::before {
+    transform: translate(-50%, -50%) scale(3); /* Aumentar o tamanho ao passar o mouse */
+}
+
+.buy-button:hover {
+    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+    border-color: #2980b9; /* Cor da borda ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de elevação */
+}
+
+
+.unavailable {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.unavailable:hover {
+    opacity: 0.8; /* Ajustar a opacidade ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento de escala */
+    filter: brightness(120%); /* Ajustar o brilho */
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-conteudo {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.fechar-modal:hover {
+    color: #f39c12; /* Cor laranja ao passar o mouse */
+}

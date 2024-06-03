@@ -1,0 +1,122 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #212121, #333333); /* Fundo gradiente futurista */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+
+/* Overlay para melhorar o contraste */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparente */
+    z-index: -1; /* Colocar atrás do conteúdo */
+}
+
+.container {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Cor do texto */
+}
+}
+
+
+/* Estilos do título */
+h1 {
+    color: #fff; /* Amarelo */
+    font-size: 64px; /* Tamanho do texto */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra */
+}
+
+/* Estilos das etiquetas */
+label {
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: #bbb; /* Cinza mais claro */
+    display: block;
+    margin-top: 10px; /* Espaçamento superior */
+    text-align: left;
+}
+
+/* Estilos dos campos de entrada */
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #006494; /* Cor original */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #333;
+    transition: background 0.3s, border-color 0.3s;
+    font-size: 16px;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #bdc3c7; /* Cinza claro */
+    opacity: 1;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #663399; /* Cor original */
+    box-shadow: 0 0 8px rgba(102, 51, 153, 0.5);
+    outline: none;
+}
+
+/* Estilos para o botão de login */
+.login-button {
+    background-color: #006494; /* Cor original */
+    margin-top: 20px; /* Move o botão 10 pixels para baixo */
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.login-button:hover {
+    background-color: #663399; /* Cor original */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(102, 51, 153, 0.2);
+}
+
+/* Estilos para o link de registro */
+.register-link {
+    color: #006494; /* Cor original */
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.register-link:hover {
+    color: #663399; /* Cor original */
+    text-decoration: underline;
+}
